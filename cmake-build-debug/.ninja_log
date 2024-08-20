@@ -1,0 +1,7 @@
+# ninja log v6
+0	19	1724193106376508654	build.ninja	5a779c5fabce57d9
+2	367	1724192785186911176	CMakeFiles/ElectricAndMagneticFieldSimulation.dir/main.c.o	26dc688bee846b5e
+362	425	1724192511094488653	ElectricAndMagneticFieldSimulation	6add335d83e3ab1f
+3	400	1724191776896076322	CMakeFiles/ElectricAndMagneticFieldSimulation.dir/electric_field.c.o	f06f496c30ad4f72
+12	417	1724191776908076164	CMakeFiles/ElectricAndMagneticFieldSimulation.dir/magnetic_field.c.o	3c20544957e3cd4f
+401	768	1724191777296071094	CMakeFiles/ElectricAndMagneticFieldSimulation.dir/flow_field.c.o	abe8970ee9418e0b
