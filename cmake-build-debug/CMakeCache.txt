@@ -198,6 +198,12 @@ ElectricAndMagneticFieldSimulation_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 ElectricAndMagneticFieldSimulation_SOURCE_DIR:STATIC=/home/osso/CLionProjects/ElectricAndMagneticFieldSimulation
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2
+
+//The directory containing a CMake configuration file for SDL2_ttf.
+SDL2_ttf_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SDL2_ttf
+
 
 ########################
 # INTERNAL cache entries
