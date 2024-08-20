@@ -1,0 +1,3 @@
+/home/osso/CLionProjects/ElectricAndMagneticFieldSimulation/cmake-build-debug/CMakeFiles/ElectricAndMagneticFieldSimulation.dir
+/home/osso/CLionProjects/ElectricAndMagneticFieldSimulation/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/osso/CLionProjects/ElectricAndMagneticFieldSimulation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
