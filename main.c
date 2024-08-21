@@ -29,7 +29,7 @@ int main(int argc, char* argv[]) {
         SDL_Quit();
         return 1;
     }
-    TTF_Font *font = TTF_OpenFont("path_to_your_font.ttf", 24);
+    TTF_Font *font = TTF_OpenFont("/home/osso/CLionProjects/ElectricAndMagneticFieldSimulation/Roboto-Regular.ttf", 24);
     if (!font) {
         printf("TTF_OpenFont: %s\n", TTF_GetError());
         TTF_Quit();

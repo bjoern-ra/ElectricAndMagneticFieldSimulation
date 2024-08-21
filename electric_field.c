@@ -3,6 +3,8 @@
 #include <math.h>
 
 #define POINT_RADIUS 10
+#define NUM_CIRCLES 5  // Anzahl der konzentrischen Kreise
+#define CIRCLE_SPACING 20  // Abstand zwischen den Kreisen
 
 typedef struct {
     float x, y;
@@ -15,6 +17,21 @@ void draw_point(SDL_Renderer *renderer, int cx, int cy, int radius) {
             int dy = radius - h;
             if ((dx * dx + dy * dy) <= (radius * radius)) {
                 SDL_RenderDrawPoint(renderer, cx + dx, cy + dy);
+            }
+        }
+    }
+}
+
+void draw_concentric_circles(SDL_Renderer *renderer, int cx, int cy, int num_circles, int spacing) {
+    for (int i = 1; i <= num_circles; i++) {
+        int radius = i * spacing;
+        for (int w = 0; w < radius * 2; w++) {
+            for (int h = 0; h < radius * 2; h++) {
+                int dx = radius - w;
+                int dy = radius - h;
+                if ((dx * dx + dy * dy) <= (radius * radius) && (dx * dx + dy * dy) >= ((radius - 1) * (radius - 1))) {
+                    SDL_RenderDrawPoint(renderer, cx + dx, cy + dy);
+                }
             }
         }
     }
@@ -51,6 +68,12 @@ void run_electric_field_simulation(SDL_Renderer *renderer) {
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
         SDL_RenderClear(renderer);
 
+        // Draw concentric circles around the points
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        draw_concentric_circles(renderer, point1.x, point1.y, NUM_CIRCLES, CIRCLE_SPACING);
+        draw_concentric_circles(renderer, point2.x, point2.y, NUM_CIRCLES, CIRCLE_SPACING);
+
+        // Draw the points
         SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
         draw_point(renderer, point1.x, point1.y, POINT_RADIUS);
         draw_point(renderer, point2.x, point2.y, POINT_RADIUS);
